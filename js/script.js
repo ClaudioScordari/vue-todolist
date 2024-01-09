@@ -5,7 +5,8 @@ createApp({
         return {
             // Contenuto dell'input va direttamente qui
             newTodo: {
-                text: ''
+                text: '',
+                done: false
             },
 
             arrTodo: [
@@ -49,7 +50,8 @@ createApp({
             if (this.newTodo.text.trim().length > 0) {
                 this.arrTodo.push(this.newTodo);
                 this.newTodo = {
-                    text: ''
+                    text: '',
+                    done: false
                 }
             }
         },
