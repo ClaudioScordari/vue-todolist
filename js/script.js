@@ -3,6 +3,10 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            // Contenuto dell'input va direttamente qui
+            newTodo: {
+                text: ''
+            },
 
             arrTodo: [
                 {
@@ -19,7 +23,7 @@ createApp({
                 },
                 {
                     text: 'Acciughe',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'Marmellata',
@@ -37,8 +41,14 @@ createApp({
         }
     },
     methods: {
-        removeTodo() {
-            this.arrTodo.splice(0, 1);
+        removeTodo(indiceTodo) {
+            this.arrTodo.splice(indiceTodo, 1);
+        },
+        addTodo() {
+            if (this.newTodo.text.trim().length > 0) {
+                this.arrTodo.push(this.newTodo);
+                // - this.newTodo.text = ''; - Controllare in correzione
+            }
         }
     }
 }).mount('#app')

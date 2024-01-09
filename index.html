@@ -26,11 +26,16 @@
 
                 <h1>My Todo List</h1>
 
+                <div class="my-4">
+                    <input v-model="newTodo.text" type="text" placeholder="Inserisci alimento">
+                    <button @click="addTodo()" class="ms-3">Aggiungi</button>
+                </div>
+
                 <ul>
                     <li v-for="(oneTodo, index) in arrTodo" :class="oneTodo.done == true ? 'sbarrato' : ''"
                         class="mb-4">
-                        {{ index }} - {{ oneTodo.text }}, {{ oneTodo.done }}
-                        <button @click="removeTodo()" class="fs-3 px-3">X</button>
+                        {{ index }} - {{ oneTodo.text }} {{ oneTodo.done }}
+                        <button @click="removeTodo(index)" class="fs-3 px-3">X</button>
                     </li>
                 </ul>
 
