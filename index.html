@@ -22,9 +22,15 @@
         <!-- MAIN -->
         <main>
 
-            <div id="app">
+            <div class="m-5" id="app">
 
+                <h1>My Todo List</h1>
 
+                <ul>
+                    <li v-for="(oneTodo, index) in arrTodo" :class="oneTodo.done == true ? 'sbarrato' : ''">
+                        {{ index }} - {{ oneTodo.text }}, {{ oneTodo.done }}
+                    </li>
+                </ul>
 
             </div>
 
