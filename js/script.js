@@ -45,9 +45,12 @@ createApp({
             this.arrTodo.splice(indiceTodo, 1);
         },
         addTodo() {
+            // trim() serve per non far passare gli spazi nell'input (toglie spazi prima e dopo)
             if (this.newTodo.text.trim().length > 0) {
                 this.arrTodo.push(this.newTodo);
-                // - this.newTodo.text = ''; - Controllare in correzione
+                this.newTodo = {
+                    text: ''
+                }
             }
         }
     }

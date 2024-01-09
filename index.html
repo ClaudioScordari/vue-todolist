@@ -27,7 +27,7 @@
                 <h1>My Todo List</h1>
 
                 <div class="my-4">
-                    <input v-model="newTodo.text" type="text" placeholder="Inserisci alimento">
+                    <input @keyup.enter="addTodo()" v-model="newTodo.text" type="text" placeholder="Inserisci alimento">
                     <button @click="addTodo()" class="ms-3">Aggiungi</button>
                 </div>
 
