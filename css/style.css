@@ -1,3 +1,21 @@
 .sbarrato {
     text-decoration: line-through;
 }
+
+.color-green {
+    color: green;
+    border: 1px solid green;
+    padding: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.color-red {
+    color: red;
+    border: 1px solid red;
+    padding: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}

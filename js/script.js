@@ -52,6 +52,13 @@ createApp({
                     text: ''
                 }
             }
+        },
+        changeDone(i) {
+            if (this.arrTodo[i].done == false) {
+                this.arrTodo[i].done = true;
+            } else {
+                this.arrTodo[i].done = false;
+            }
         }
     }
 }).mount('#app')

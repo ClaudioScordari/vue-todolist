@@ -34,7 +34,10 @@
                 <ul>
                     <li v-for="(oneTodo, index) in arrTodo" :class="oneTodo.done == true ? 'sbarrato' : ''"
                         class="mb-4">
-                        {{ index }} - {{ oneTodo.text }} {{ oneTodo.done }}
+                        {{ index }} - {{ oneTodo.text }}
+                        <span @click="changeDone(index)" :class="oneTodo.done == true ? 'color-green' : 'color-red'">
+                            {{ oneTodo.done }}
+                        </span>
                         <button @click="removeTodo(index)" class="fs-3 px-3">X</button>
                     </li>
                 </ul>
