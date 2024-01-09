@@ -35,5 +35,10 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        removeTodo() {
+            this.arrTodo.splice(0, 1);
+        }
     }
 }).mount('#app')
